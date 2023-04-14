@@ -15,7 +15,7 @@ def process_image_CNN(img):
 
 def process_image_NB(img):
     image = cv2.imread(img)
-    image = cv2.resize(image, (64, 64), interpolation=cv2.INTER_AREA)
+    image = cv2.resize(image, (128, 128), interpolation=cv2.INTER_AREA)
     image = cv2.cvtColor(image, cv2.COLOR_BGR2GRAY)
 
     return image.flatten()
