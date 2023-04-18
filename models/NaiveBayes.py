@@ -27,7 +27,7 @@ def Naive_Bayes_classification():
     global training_images, training_labels, validation_images, validation_labels
     naive_bayes_model = MultinomialNB()
 
-    intervals = [3, 4, 5, 6, 7, 8, 9, 10]
+    intervals = [3, 4, 5, 6, 7, 8]
     for interval in intervals:
         new_bins = generate_intervals(interval)
 

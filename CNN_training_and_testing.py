@@ -73,8 +73,6 @@ def train_CNN(model, train_dataloader, val_dataloader, optimizer, num_epochs=10,
 
 def test_CNN(model, test_dataloader, device, loss_function=nn.BCEWithLogitsLoss()):
     testing_predictions = []
-    test_loss = 0.
-    size = len(test_dataloader.dataset)
     model.eval()
     
     with torch.no_grad():
@@ -98,5 +96,4 @@ def test_CNN(model, test_dataloader, device, loss_function=nn.BCEWithLogitsLoss(
             test_loss += loss.item()
             print(f"-->--> Batch testing loss: {loss.item()}")
 
-    test_loss /= size
     return testing_predictions

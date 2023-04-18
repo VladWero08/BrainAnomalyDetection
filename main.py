@@ -13,6 +13,8 @@ import models.ResNet18 as RESNET18
 
 # Splitting the images in the file into training and validation
 images_paths = glob.glob("../input/unibuc-brain-ad/data/data/*.png")
+images_paths.sort()
+
 training_images_paths = images_paths[:15000]
 validation_images_paths = images_paths[15000:17000]
 testing_images_paths = images_paths[17000:]
